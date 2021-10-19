@@ -1,0 +1,209 @@
+#multi-step-form{
+    background-color: brown;
+}
+#multi-step-form #msform {
+    text-align: center;
+    position: relative;
+    margin-top: 20px
+}
+
+#multi-step-form #msform fieldset {
+    background: white;
+    border: 0 none;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 20px;
+    position: relative
+}
+#multi-step-form .form-card {
+    text-align: left
+}
+
+#multi-step-form #msform fieldset:not(:first-of-type) {
+    display: none
+}
+
+#multi-step-form #msform input,
+#multi-step-form #msform textarea {
+    padding: 8px 15px 8px 15px;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    margin-bottom: 25px;
+    margin-top: 2px;
+    box-sizing: border-box;
+    font-family: montserrat;
+    color: #2C3E50;
+    background-color: #ECEFF1;
+    font-size: 16px;
+    letter-spacing: 1px
+}
+
+#multi-step-form #msform input:focus,
+#multi-step-form #msform textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #673AB7;
+    outline-width: 0
+}
+
+#multi-step-form #msform .action-button {
+                    width: 100px;
+                    background: #25cd44;
+                    font-weight: bold;
+                    color: white;
+                    border: 0 none;
+                    border-radius: 0px;
+                    cursor: pointer;
+                    padding: 10px 5px;
+                    margin: 10px 0px 10px 5px;
+                    float: right
+                }
+
+                #multi-step-form #msform .action-button:hover,
+                #multi-step-form #msform .action-button:focus {
+                    background-color: #435444
+                }
+
+                #multi-step-form #msform .action-button-previous {
+                    width: 100px;
+                    background: #616161;
+                    font-weight: bold;
+                    color: white;
+                    border: 0 none;
+                    border-radius: 0px;
+                    cursor: pointer;
+                    padding: 10px 5px;
+                    margin: 10px 5px 10px 0px;
+                    float: right
+                }
+
+                #multi-step-form #msform .action-button-previous:hover,
+                #multi-step-form #msform .action-button-previous:focus {
+                    background-color: #000000
+                }
+
+                #multi-step-form .card {
+                    z-index: 0;
+                    border: none;
+                    position: relative
+                }
+
+                #multi-step-form .fs-title {
+                    font-size: 25px;
+                    color: #435444;
+                    margin-bottom: 15px;
+                    font-weight: bold;
+                    text-align: left
+                }
+
+                #multi-step-form .steps {
+                    font-size: 25px;
+                    color: gray;
+                    margin-bottom: 10px;
+                    font-weight: normal;
+                    text-align: right
+                }
+
+                #multi-step-form .fieldlabels {
+                    color: gray;
+                    text-align: left
+                }
+
+                #multi-step-form #progressbar {
+                    margin-bottom: 30px;
+                    overflow: hidden;
+                    color: lightgrey
+                }
+
+                #multi-step-form #progressbar .active {
+                    color: #25cd44;
+                }
+
+                #multi-step-form #progressbar li {
+                    list-style-type: none;
+                    font-size: 15px;
+                    width: 33.3%;
+                    float: left;
+                    position: relative;
+                    font-weight: 400
+                }
+
+                #multi-step-form #progressbar #account:before {
+                    font-family: FontAwesome;
+                    content: "\f13e"
+                }
+
+                #multi-step-form #progressbar #personal:before {
+                    font-family: FontAwesome;
+                    content: "\f007"
+                }
+
+                #multi-step-form #progressbar #confirm:before {
+                    font-family: FontAwesome;
+                    content: "\f00c"
+                }
+
+                #multi-step-form #progressbar li:before {
+                    width: 50px;
+                    height: 50px;
+                    line-height: 45px;
+                    display: block;
+                    font-size: 20px;
+                    color: #ffffff;
+                    background: lightgray;
+                    border-radius: 50%;
+                    margin: 0 auto 10px auto;
+                    padding: 2px
+                }
+
+                #multi-step-form #progressbar li:after {
+                    content: '';
+                    width: 100%;
+                    height: 2px;
+                    background: lightgray;
+                    position: absolute;
+                    left: 0;
+                    top: 25px;
+                    z-index: -1
+                }
+
+                #multi-step-form #progressbar li.active:before,
+                #multi-step-form #progressbar li.active:after {
+                    background: #25cd44
+                }
+
+                #multi-step-form .progress {
+                    height: 20px
+                }
+
+                #multi-step-form .progress-bar {
+                    background-color: #25cd44
+                }
+                #multi-step-form #topBg{
+                   background-image: url("NigIctLogo.png");
+                   height: 200px;
+                   background-position: center;
+                   background-repeat: no-repeat;
+                   background-size: cover;
+                   position: relative;
+                }
+                #multi-step-form .topBgContent{
+                    background: -moz-linear-gradient(to bottom right, rgba(65, 178, 102,0.4) 0%, rgba(59, 69, 59, 0.8) 100%); /* FF3.6+ */
+                    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(59, 69, 59, 0.8)), color-stop(100%,rgba(0,47,75,0.5))); /* Chrome,Safari4+ */
+                    background: -webkit-linear-gradient(top, rgba(65, 178, 102,0.5) 0%,rgba(59, 69, 59, 0.8) 100%); /* Chrome10+,Safari5.1+ */
+                    background: -o-linear-gradient(top, rgba(65, 178, 102,0.5) 0%,rgba(59, 69, 59, 0.8) 100%); /* Opera 11.10+ */
+                    background: -ms-linear-gradient(top, rgba(65, 178, 102,0.5) 0%,rgba(59, 69, 59, 0.8) 100%); /* IE10+ */
+                    background: linear-gradient(to bottom right, rgba(65, 178, 102,0.5) 0%,rgba(59, 69, 59, 0.9) 100%);
+                }
+                #multi-step-form .input-hidden {
+                    position: absolute;
+                    left: -9999px;
+                }
+
+#multi-step-form input[name=ictguest]:checked + label>img {
+    border: 1px solid #fff;
+    box-shadow: 0 0 3px 3px #090;
+}
