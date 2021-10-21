@@ -1,4 +1,27 @@
 $(document).ready(function(){
+    
+    $('input[name=ictguest]').click(function(){
+        let eventPurpose =$("input[type='radio'][name='ictguest']:checked").val();
+        if(eventPurpose=='exhibitor'){
+            $('#exibitorInfo').removeClass('d-none');
+            $('#sponsorInfo').addClass('d-none');
+            $("input[name='payment']").removeAttr('required');
+        }else if(eventPurpose=='sponsor'){
+            $('#exibitorInfo').addClass('d-none');
+            $('#sponsorInfo').removeClass('d-none');
+                $("input[name='payment']").each(function(index, element) { 
+                    if(index == 0) {
+                        let req=$("input[name='payment']")[index];
+                        $(req).attr('required', 'required');
+                    }
+                });
+        }else{
+            $('#sponsorInfo').addClass('d-none');
+            $('#exibitorInfo').addClass('d-none');
+            $("input[name='payment']").removeAttr('required');
+        }
+    })
+    
     var current_fs, next_fs, previous_fs; //fieldsets
     var opacity;
     var current = 1;
@@ -7,6 +30,9 @@ $(document).ready(function(){
     setProgressBar(current);
 
     $(".next").click(function(){
+        let requireField=checkRequire();
+        if(requireField==false)return;
+
         current_fs = $(this).parent();
         next_fs = $(this).parent().next();
 
@@ -67,8 +93,46 @@ $(document).ready(function(){
     .css("width",percent+"%")
     }
 
-    $(".submit").click(function(){
-    return false;
-    })
+    // $(next_fs).on(show)(function(){
+    //     let n=$("fieldset").length-1;
+    // if (n =='1') {
+    //     alert("almos done")
+    //     $(".next").html("Submit");
+    //   } else {
+    //     $(".next").html("Next");
+    //   }
+    // })
+
+    function checkRequire(){
+        
+        let ictguest=  $('input, textarea, select', '#msform');
+        ictguest.each(function(index , element) {
+            let msformName=$(this).attr('name');
+            if($(this).attr('required')){
+               let radValue=$(this).attr('type');
+               switch(radValue) { 
+                    case 'radio':
+                    if(!$(msformName).is(':checked')) {
+                        console.log($(msformName).val());
+                        alert('radio not checked');
+                    
+                    };
+                    // radCheck="$(this).filter(':checked').val()";
+                    // if($(radCheck)=='undefine'||$(radCheck)=='null'||$(radCheck)=='false'||$(radCheck)=='') {
+                    //     alert('radio not checked');
+                    
+                    // }else{alert ('vot working')};
+
+                    // case 'input':
+                    // if($(this).val()=='') {
+                    //    alert('value empty')
+                    // }else{
+                    //     alert("value");
+                    // };
+               }
+            }
+        });
+    }
+    
 
 })

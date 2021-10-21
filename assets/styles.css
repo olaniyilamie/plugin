@@ -1,6 +1,4 @@
-#multi-step-form{
-    background-color: brown;
-}
+
 #multi-step-form #msform {
     text-align: center;
     position: relative;
@@ -27,7 +25,7 @@
 
 #multi-step-form #msform input,
 #multi-step-form #msform textarea {
-    padding: 8px 15px 8px 15px;
+    padding: 0px 0px 0px 0px;
     border: 1px solid #ccc;
     border-radius: 0px;
     margin-bottom: 25px;
@@ -37,7 +35,6 @@
     color: #2C3E50;
     background-color: #ECEFF1;
     font-size: 16px;
-    letter-spacing: 1px
 }
 
 #multi-step-form #msform input:focus,
@@ -49,6 +46,12 @@
     outline-width: 0
 }
 
+#multi-step-form .form-control-sm {
+    border: 1px solid #f1f1f1;
+    padding: 10px;
+    height: 35px;
+    border-radius: 1; 
+}
 #multi-step-form #msform .action-button {
                     width: 100px;
                     background: #25cd44;
@@ -108,7 +111,7 @@
                 }
 
                 #multi-step-form .fieldlabels {
-                    color: gray;
+                    color: black;
                     text-align: left
                 }
 
@@ -198,10 +201,10 @@
                     background: -ms-linear-gradient(top, rgba(65, 178, 102,0.5) 0%,rgba(59, 69, 59, 0.8) 100%); /* IE10+ */
                     background: linear-gradient(to bottom right, rgba(65, 178, 102,0.5) 0%,rgba(59, 69, 59, 0.9) 100%);
                 }
-                #multi-step-form .input-hidden {
-                    position: absolute;
-                    left: -9999px;
-                }
+#multi-step-form .input-hidden {
+    position: absolute;
+    left: -9999px;
+}
 
 #multi-step-form input[name=ictguest]:checked + label>img {
     border: 1px solid #fff;
