@@ -107,16 +107,18 @@ $(document).ready(function(){
         
         let ictguest=  $('input, textarea, select', '#msform');
         ictguest.each(function(index , element) {
-            let msformName=$(this).attr('name');
-            if($(this).attr('required')){
-               let radValue=$(this).attr('type');
-               switch(radValue) { 
+            if($(this).attr('required')) {
+                const name = $(this).attr('name');
+                let radValue= $(this).attr('type');
+
+                switch(radValue) {
+
                     case 'radio':
-                    if(!$(msformName).is(':checked')) {
-                        console.log($(msformName).val());
+                    if($('input[name="' + name + '"]:checked').val() == null) {
                         alert('radio not checked');
-                    
-                    };
+                    }
+
+
                     // radCheck="$(this).filter(':checked').val()";
                     // if($(radCheck)=='undefine'||$(radCheck)=='null'||$(radCheck)=='false'||$(radCheck)=='') {
                     //     alert('radio not checked');
